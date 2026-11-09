@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>賮賷丿賷賵賴丕鬲 賵乇賵丕賷丕鬲</title>
+<title>فيديوهات وروايات</title>
 <meta name="theme-color" content="#d4af37">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -141,7 +141,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
 
 <div class="ad-overlay" id="adOverlay">
   <div class="ad-header">
-    <button class="ad-close-btn" id="adCloseBtn" onclick="closeAd()">鬲禺胤賷 丕賱廿毓賱丕賳 (5)</button>
+    <button class="ad-close-btn" id="adCloseBtn" onclick="closeAd()">تخطي الإعلان (5)</button>
   </div>
   <div class="ad-content" id="adContainer">
     <script type="text/javascript">
@@ -154,61 +154,60 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
 <div id="customToast" class="toast-notification"></div>
 
 <header class="top-bar">
-  <div class="brand"><h1>賮賷丿賷賵賴丕鬲 賵乇賵丕賷丕鬲</h1></div>
+  <div class="brand"><h1>فيديوهات وروايات</h1></div>
   <div class="controls">
-    <button class="icon-btn" id="userBtn" onclick="openUserModal()" title="丨爻丕亘 丕賱賲卮丕賴丿">馃懁</button>
+    <button class="icon-btn" id="userBtn" onclick="openUserModal()" title="حساب المشاهد">👤</button>
     <span class="user-email" id="userEmailDisplay"></span>
-    <button class="icon-btn" id="loginBtn" onclick="openAdminModal()" title="丿禺賵賱 丕賱兀丿賲賳">馃攼</button>
-    <button class="icon-btn" id="logoutBtn" onclick="adminLogout()" title="禺乇賵噩 丕賱兀丿賲賳" style="display:none;">馃毆</button>
-    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="鬲睾賷賷乇 丕賱賲馗賴乇">馃寵</button>
+    <button class="icon-btn" id="loginBtn" onclick="openAdminModal()" title="دخول الأدمن">🔐</button>
+    <button class="icon-btn" id="logoutBtn" onclick="adminLogout()" title="خروج الأدمن" style="display:none;">🚪</button>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="تغيير المظهر">🌙</button>
   </div>
 </header>
 
 <main class="container">
-  <div class="greeting"><h2 id="greetingText">噩丕乇賷 丕賱鬲丨賲賷賱...</h2></div>
+  <div class="greeting"><h2 id="greetingText">جاري التحميل...</h2></div>
 
   <div class="admin-panel hidden" id="adminPanel">
-    <button class="btn-admin gold" onclick="openStoryModal()">+ 兀囟賮 賮賷丿賷賵 噩丿賷丿</button>
-    <button class="btn-admin" onclick="openCatModal()">鈿欙笍 廿丿丕乇丞 丕賱鬲氐賳賷賮丕鬲</button>
-    <span class="warning-text" id="catWarning">鈿狅笍 賷噩亘 廿囟丕賮丞 鬲氐賳賷賮 兀賵賱丕賸!</span>
+    <button class="btn-admin gold" onclick="openStoryModal()">+ أضف فيديو جديد</button>
+    <button class="btn-admin" onclick="openCatModal()">⚙️ إدارة التصنيفات</button>
+    <span class="warning-text" id="catWarning">⚠️ يجب إضافة تصنيف أولاً!</span>
   </div>
 
   <div class="filters" id="filtersContainer" style="display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap;"></div>
   <div id="heroSection" class="hero hidden"></div>
-  <h3 class="section-title" id="gridTitle">賮賷丿賷賵賴丕鬲 兀禺乇賶</h3>
+  <h3 class="section-title" id="gridTitle">فيديوهات أخرى</h3>
   <div class="grid" id="storyGrid"></div>
 </main>
 
 <div class="read-overlay" id="readModal">
   <header class="read-nav">
-    <button class="read-nav-btn" onclick="closeModal('readModal')">猬�</button>
+    <button class="read-nav-btn" onclick="closeModal('readModal')">⬅</button>
     <div class="read-nav-tools">
-      <button class="read-nav-btn" id="readFavBtn" onclick="toggleFavoriteReadModal()" title="丨賮馗 賮賷 丕賱賲賮囟賱丞">馃</button>
-      <button class="read-nav-btn" onclick="toggleTheme()" id="readThemeBtn" title="鬲睾賷賷乇 丕賱賲馗賴乇">馃寵</button>
+      <button class="read-nav-btn" id="readFavBtn" onclick="toggleFavoriteReadModal()" title="حفظ في المفضلة">🤍</button>
+      <button class="read-nav-btn" onclick="toggleTheme()" id="readThemeBtn" title="تغيير المظهر">🌙</button>
     </div>
   </header>
   <div class="read-scroll-area">
     <div class="read-content-wrap">
       <div class="video-container" id="videoContainer"></div>
       
-      <!-- 夭乇丕乇 丕丨鬲賷丕胤賷 賱賵 丕賱賷賵鬲賷賵亘 乇賮囟 丕賱鬲卮睾賷賱 -->
       <div class="video-fallback" id="videoFallback" style="display:none;">
-        <a id="videoFallbackLink" href="#" target="_blank">馃敆 丕賱賮賷丿賷賵 賲卮 乇丕囟賷 賷卮鬲睾賱 賴賳丕. 丕囟睾胤 賴賳丕 賱賲卮丕賴丿鬲賴 毓賱賶 賷賵鬲賷賵亘 賲亘丕卮乇丞.</a>
+        <a id="videoFallbackLink" href="#" target="_blank">🔗 الفيديو مش راضي يشتغل هنا. اضغط هنا لمشاهدته على يوتيوب مباشرة.</a>
       </div>
 
       <div class="read-header">
         <div class="read-meta">
           <span class="read-meta-tag" id="readCat"></span>
-          <span>鈴� <span id="readDur"></span> 丿賯丕卅賯</span>
-          <span id="readPremiumBadge" class="badge-premium hidden">馃憫 賲丿賮賵毓丞</span>
+          <span>⏱ <span id="readDur"></span> دقائق</span>
+          <span id="readPremiumBadge" class="badge-premium hidden">👑 مدفوعة</span>
         </div>
         <h1 class="read-title" id="readTitle"></h1>
       </div>
       <div class="paywall-section" id="paywallSection">
-        <h3>丕賱賮賷丿賷賵 丿賴 賲丿賮賵毓 賷丕 亘胤賱 馃憫</h3>
-        <p id="paywallText">毓噩亘鬲賰 丕賱亘丿丕賷丞責 丨賵賱 丕賱賲亘賱睾 毓卮丕賳 鬲賰賲賱 丕賱賮賷丿賷賵 賵鬲賮鬲丨賴 賱賷賰 賱賱兀亘丿.</p>
+        <h3>الفيديو ده مدفوع يا بطل 👑</h3>
+        <p id="paywallText">عجبتك البداية؟ حول المبلغ عشان تكمل الفيديو وتفتحه ليك للأبد.</p>
         <button class="btn-pay" id="payBtn" onclick="openCryptoModal()">
-          <span>馃捀</span> <span id="payBtnText">丕丿賮毓 賵丕賰賲賱 丕賱賮賷丿賷賵</span>
+          <span>💸</span> <span id="payBtnText">ادفع واكمل الفيديو</span>
         </button>
       </div>
       <div style="height: 80px;"></div>
@@ -218,112 +217,112 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
 
 <div class="modal-overlay" id="cryptoModal">
   <div class="modal">
-    <span class="close-x" onclick="closeModal('cryptoModal')">鉁�</span>
-    <h3>丕賱丿賮毓 亘毓賲賱丞 USDT</h3>
+    <span class="close-x" onclick="closeModal('cryptoModal')">✖</span>
+    <h3>الدفع بعملة USDT</h3>
     <div class="crypto-steps">
-      <div class="step-item"><div class="step-num">1</div><div class="step-text">丕賮鬲丨 賲丨賮馗鬲賰 賵丕禺鬲丕乇 卮亘賰丞 <strong>TRON (TRC20)</strong>.</div></div>
-      <div class="step-item"><div class="step-num">2</div><div class="step-text">丨賵賱 賲亘賱睾 <strong id="cryptoAmount" style="color:var(--gold);">5</strong> USDT 廿賱賶 丕賱毓賳賵丕賳 丕賱鬲丕賱賷:</div></div>
+      <div class="step-item"><div class="step-num">1</div><div class="step-text">افتح محفظتك واختار شبكة <strong>TRON (TRC20)</strong>.</div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-text">حول مبلغ <strong id="cryptoAmount" style="color:var(--gold);">5</strong> USDT إلى العنوان التالي:</div></div>
       <div class="wallet-box">
         <span class="wallet-address" id="cryptoAddress">THWGrdYmpp2gTASvcs2YgtrrGDSmGbkdeB</span>
-        <button class="btn-copy" onclick="copyAddress()">馃搵 賳爻禺 丕賱毓賳賵丕賳</button>
+        <button class="btn-copy" onclick="copyAddress()">📋 نسخ العنوان</button>
       </div>
-      <div class="step-item" style="margin-top:15px;"><div class="step-num">3</div><div class="step-text">亘毓丿 丕賱鬲丨賵賷賱貙 丕賳爻禺 <strong>乇賯賲 丕賱毓賲賱賷丞 (TxID / Hash)</strong>.</div></div>
-      <div class="step-item"><div class="step-num">4</div><div class="step-text">兀賱氐賯 乇賯賲 丕賱毓賲賱賷丞 賮賷 丕賱賲乇亘毓 亘丕賱兀爻賮賱 賵丕囟睾胤 "鬲丨賯賯".</div></div>
+      <div class="step-item" style="margin-top:15px;"><div class="step-num">3</div><div class="step-text">بعد التحويل، انسخ <strong>رقم العملية (TxID / Hash)</strong>.</div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-text">ألصق رقم العملية في المربع بالأسفل واضغط "تحقق".</div></div>
     </div>
     <div class="input-group">
-      <label>乇賯賲 丕賱毓賲賱賷丞 (TxID)</label>
-      <input type="text" id="txHashInput" placeholder="兀賱氐賯 丕賱賭 TxID 賴賳丕 (64 丨乇賮)..." style="direction:ltr; text-align:left; font-family:monospace;">
+      <label>رقم العملية (TxID)</label>
+      <input type="text" id="txHashInput" placeholder="ألصق الـ TxID هنا (64 حرف)..." style="direction:ltr; text-align:left; font-family:monospace;">
     </div>
     <div class="modal-actions">
-      <button class="btn-save" id="verifyBtn" onclick="verifyCryptoPayment()">鬲丨賯賯 賵丕賮鬲丨 丕賱賮賷丿賷賵</button>
-      <button class="btn-cancel" onclick="closeModal('cryptoModal')">廿賱睾丕亍</button>
+      <button class="btn-save" id="verifyBtn" onclick="verifyCryptoPayment()">تحقق وافتح الفيديو</button>
+      <button class="btn-cancel" onclick="closeModal('cryptoModal')">إلغاء</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay" id="userModal">
   <div class="modal">
-    <span class="close-x" onclick="closeModal('userModal')">鉁�</span>
-    <h3 id="userModalTitle">丨爻丕亘 丕賱賲卮丕賴丿</h3>
+    <span class="close-x" onclick="closeModal('userModal')">✖</span>
+    <h3 id="userModalTitle">حساب المشاهد</h3>
     <div id="loggedOutView">
       <div class="input-group">
-        <label>丕賱亘乇賷丿 丕賱廿賱賰鬲乇賵賳賷</label>
+        <label>البريد الإلكتروني</label>
         <input type="email" id="userEmail" placeholder="example@mail.com" style="direction:ltr; text-align:left;">
       </div>
       <div class="input-group">
-        <label>賰賱賲丞 丕賱賲乇賵乇</label>
+        <label>كلمة المرور</label>
         <input type="password" id="userPassword" placeholder="********" style="direction:ltr; text-align:left;">
       </div>
       <div class="modal-actions" style="flex-direction: column;">
-        <button class="btn-save" id="authSubmitBtn" onclick="submitAuth()">鬲爻噩賷賱 丕賱丿禺賵賱</button>
-        <button class="btn-cancel" id="authToggleBtn" onclick="toggleAuthMode()" style="margin-top:10px; border:none; background:transparent; color:var(--gold);">賱賷爻 賱丿賷賰 丨爻丕亘責 廿賳卮丕亍 丨爻丕亘 噩丿賷丿</button>
+        <button class="btn-save" id="authSubmitBtn" onclick="submitAuth()">تسجيل الدخول</button>
+        <button class="btn-cancel" id="authToggleBtn" onclick="toggleAuthMode()" style="margin-top:10px; border:none; background:transparent; color:var(--gold);">ليس لديك حساب؟ إنشاء حساب جديد</button>
       </div>
     </div>
     <div id="loggedInView" class="hidden" style="text-align:center;">
-      <p style="margin-bottom:20px; color:var(--text-main);">兀賴賱丕賸 亘賰貙 <br><strong id="displayLoggedInEmail" style="color:var(--gold); font-size:18px;"></strong></p>
-      <button class="btn-cancel" style="width:100%; border-color:#e74c3c; color:#e74c3c;" onclick="readerLogout()">鬲爻噩賷賱 丕賱禺乇賵噩</button>
+      <p style="margin-bottom:20px; color:var(--text-main);">أهلاً بك، <br><strong id="displayLoggedInEmail" style="color:var(--gold); font-size:18px;"></strong></p>
+      <button class="btn-cancel" style="width:100%; border-color:#e74c3c; color:#e74c3c;" onclick="readerLogout()">تسجيل الخروج</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay" id="adminModal">
   <div class="modal">
-    <span class="close-x" onclick="closeModal('adminModal')">鉁�</span>
-    <h3>鬲爻噩賷賱 丿禺賵賱 丕賱兀丿賲賳</h3>
+    <span class="close-x" onclick="closeModal('adminModal')">✖</span>
+    <h3>تسجيل دخول الأدمن</h3>
     <div class="input-group">
-      <label>賰賱賲丞 丕賱賲乇賵乇</label>
-      <input type="password" id="adminPasswordInput" placeholder="兀丿禺賱 賰賱賲丞 丕賱賲乇賵乇..." onkeypress="handleAdminEnter(event)">
+      <label>كلمة المرور</label>
+      <input type="password" id="adminPasswordInput" placeholder="أدخل كلمة المرور..." onkeypress="handleAdminEnter(event)">
     </div>
     <div class="modal-actions">
-      <button class="btn-save" onclick="adminLogin()">丿禺賵賱</button>
-      <button class="btn-cancel" onclick="closeModal('adminModal')">廿賱睾丕亍</button>
+      <button class="btn-save" onclick="adminLogin()">دخول</button>
+      <button class="btn-cancel" onclick="closeModal('adminModal')">إلغاء</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay" id="storyModal">
   <div class="modal">
-    <span class="close-x" onclick="closeModal('storyModal')">鉁�</span>
-    <h3>賳卮乇 賮賷丿賷賵 噩丿賷丿</h3>
-    <div class="input-group"><label>丕賱毓賳賵丕賳</label><input type="text" id="inpTitle" placeholder="毓賳賵丕賳 丕賱賮賷丿賷賵..."></div>
-    <div class="input-group"><label>乇丕亘胤 丕賱氐賵乇丞 丕賱賲氐睾乇丞 (Thumbnail)</label><input type="text" id="inpImg" placeholder="https://..."></div>
+    <span class="close-x" onclick="closeModal('storyModal')">✖</span>
+    <h3>نشر فيديو جديد</h3>
+    <div class="input-group"><label>العنوان</label><input type="text" id="inpTitle" placeholder="عنوان الفيديو..."></div>
+    <div class="input-group"><label>رابط الصورة المصغرة (Thumbnail)</label><input type="text" id="inpImg" placeholder="https://..."></div>
     
     <div class="input-group">
-      <label>乇丕亘胤 丕賱賮賷丿賷賵 (YouTube 兀賵 MP4)</label>
+      <label>رابط الفيديو (YouTube أو MP4)</label>
       <input type="text" id="inpVideoUrl" placeholder="https://www.youtube.com/watch?v=...">
     </div>
 
-    <div class="input-group"><label>賵氐賮 賯氐賷乇 (賷馗賴乇 鬲丨鬲 丕賱賮賷丿賷賵)</label><textarea id="inpDesc" rows="3" placeholder="賵氐賮 亘爻賷胤..."></textarea></div>
-    <div class="input-group"><label>丕賱鬲氐賳賷賮</label><select id="inpCat"></select></div>
-    <div class="input-group"><label>丕賱賲丿丞 (丿賯丕卅賯)</label><input type="number" id="inpDur" value="5" min="1"></div>
+    <div class="input-group"><label>وصف قصير (يظهر تحت الفيديو)</label><textarea id="inpDesc" rows="3" placeholder="وصف بسيط..."></textarea></div>
+    <div class="input-group"><label>التصنيف</label><select id="inpCat"></select></div>
+    <div class="input-group"><label>المدة (دقائق)</label><input type="number" id="inpDur" value="5" min="1"></div>
     
     <div class="input-group" style="display:flex; align-items:center; gap:10px; background:var(--bg); padding:12px; border-radius:10px; border:1px solid var(--border);">
       <input type="checkbox" id="inpPremium" style="width:20px; height:20px; accent-color:var(--gold); cursor:pointer;" onchange="togglePremiumFields()">
-      <label for="inpPremium" style="margin:0; cursor:pointer; color:var(--text-main); font-weight:bold;">馃憫 賮賷丿賷賵 賲丿賮賵毓</label>
+      <label for="inpPremium" style="margin:0; cursor:pointer; color:var(--text-main); font-weight:bold;">👑 فيديو مدفوع</label>
     </div>
     
     <div id="premiumFields" class="hidden" style="background:rgba(212, 175, 55, 0.05); padding:15px; border-radius:10px; border:1px dashed var(--gold); margin-bottom:15px;">
-      <div class="input-group"><label>爻毓乇 丕賱賮賷丿賷賵 (亘丕賱丿賵賱丕乇 USDT)</label><input type="number" id="inpPrice" value="5" min="1" step="1"></div>
+      <div class="input-group"><label>سعر الفيديو (بالدولار USDT)</label><input type="number" id="inpPrice" value="5" min="1" step="1"></div>
     </div>
 
     <div class="modal-actions">
-      <button class="btn-save" id="saveBtn" onclick="saveStory()">賳卮乇 賱賱噩賲賷毓 馃殌</button>
-      <button class="btn-cancel" onclick="closeModal('storyModal')">廿賱睾丕亍</button>
+      <button class="btn-save" id="saveBtn" onclick="saveStory()">نشر للجميع 🚀</button>
+      <button class="btn-cancel" onclick="closeModal('storyModal')">إلغاء</button>
     </div>
   </div>
 </div>
 
 <div class="modal-overlay" id="catModal">
   <div class="modal">
-    <span class="close-x" onclick="closeModal('catModal')">鉁�</span>
-    <h3>廿丿丕乇丞 丕賱鬲氐賳賷賮丕鬲</h3>
+    <span class="close-x" onclick="closeModal('catModal')">✖</span>
+    <h3>إدارة التصنيفات</h3>
     <div class="input-group" style="display: flex; gap: 10px; align-items: flex-end;">
-      <div style="flex: 1;"><label>丕爻賲 丕賱鬲氐賳賷賮</label><input type="text" id="newCatName" placeholder="賲孬丕賱: 兀賰卮賳..."></div>
-      <button class="btn-save" style="flex: 0; padding: 14px 20px;" onclick="addCategory()">廿囟丕賮丞</button>
+      <div style="flex: 1;"><label>اسم التصنيف</label><input type="text" id="newCatName" placeholder="مثال: أكشن..."></div>
+      <button class="btn-save" style="flex: 0; padding: 14px 20px;" onclick="addCategory()">إضافة</button>
     </div>
-    <label>丕賱鬲氐賳賷賮丕鬲 丕賱丨丕賱賷丞:</label>
+    <label>التصنيفات الحالية:</label>
     <div class="cat-list" id="catListContainer"></div>
-    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('catModal')">廿睾賱丕賯</button></div>
+    <div class="modal-actions"><button class="btn-cancel" onclick="closeModal('catModal')">إغلاق</button></div>
   </div>
 </div>
 
@@ -353,7 +352,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
 
   let allStories = [];
   let allCategories = [];
-  let currentCat = '丕賱賰賱';
+  let currentCat = 'الكل';
   let isAdmin = false;
   let currentUser = null;
   let currentStoryData = null;
@@ -376,21 +375,21 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
   function setSmartGreeting() {
     const hour = new Date().getHours();
     let greeting = "";
-    if (hour >= 3 && hour < 12) greeting = "氐亘丕丨 丕賱禺賷乇 鈽€锔�";
-    else if (hour >= 12 && hour < 18) greeting = "賲爻丕亍 丕賱禺賷乇 馃尋锔�";
-    else greeting = "鬲氐亘丨 毓賱賶 禺賷乇 馃寵";
+    if (hour >= 3 && hour < 12) greeting = "صباح الخير ☀️";
+    else if (hour >= 12 && hour < 18) greeting = "مساء الخير 🌤️";
+    else greeting = "تصبح على خير 🌙";
     document.getElementById('greetingText').innerText = greeting;
   }
 
   window.toggleTheme = function() {
     document.body.classList.toggle('light-mode');
     const isLight = document.body.classList.contains('light-mode');
-    const icon = isLight ? '鈽€锔�' : '馃寵';
+    const icon = isLight ? '☀️' : '🌙';
     if(document.getElementById('themeBtn')) document.getElementById('themeBtn').innerText = icon;
     if(document.getElementById('readThemeBtn')) document.getElementById('readThemeBtn').innerText = icon;
   };
 
-  // ====== 賳馗丕賲 丕賱廿毓賱丕賳丕鬲 ======
+  // ====== نظام الإعلانات ======
   let adTimer = null;
   let adCallback = null;
 
@@ -402,7 +401,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     adOverlay.classList.add('active');
     
     let timeLeft = 5;
-    closeBtn.innerText = `鬲禺胤賷 丕賱廿毓賱丕賳 (${timeLeft})`;
+    closeBtn.innerText = `تخطي الإعلان (${timeLeft})`;
     closeBtn.classList.remove('active');
     closeBtn.disabled = true;
 
@@ -410,10 +409,10 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     adTimer = setInterval(() => {
       timeLeft--;
       if (timeLeft > 0) {
-        closeBtn.innerText = `鬲禺胤賷 丕賱廿毓賱丕賳 (${timeLeft})`;
+        closeBtn.innerText = `تخطي الإعلان (${timeLeft})`;
       } else {
         clearInterval(adTimer);
-        closeBtn.innerText = `廿睾賱丕賯 丕賱廿毓賱丕賳 鉁朻;
+        closeBtn.innerText = `إغلاق الإعلان ✖`;
         closeBtn.classList.add('active');
         closeBtn.disabled = false;
       }
@@ -430,7 +429,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     if (adCallback) adCallback();
   };
 
-  // ====== 廿丿丕乇丞 丕賱賲爻鬲禺丿賲賷賳 ======
+  // ====== إدارة المستخدمين ======
   auth.onAuthStateChanged(user => {
     if (user) {
       currentUser = user;
@@ -473,60 +472,60 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     const submitBtn = document.getElementById('authSubmitBtn');
     const toggleBtn = document.getElementById('authToggleBtn');
     if (isRegistering) {
-      submitBtn.innerText = '廿賳卮丕亍 丨爻丕亘 噩丿賷丿'; toggleBtn.innerText = '賱丿賷賰 丨爻丕亘 亘丕賱賮毓賱責 鬲爻噩賷賱 丕賱丿禺賵賱';
+      submitBtn.innerText = 'إنشاء حساب جديد'; toggleBtn.innerText = 'لديك حساب بالفعل؟ تسجيل الدخول';
     } else {
-      submitBtn.innerText = '鬲爻噩賷賱 丕賱丿禺賵賱'; toggleBtn.innerText = '賱賷爻 賱丿賷賰 丨爻丕亘責 廿賳卮丕亍 丨爻丕亘 噩丿賷丿';
+      submitBtn.innerText = 'تسجيل الدخول'; toggleBtn.innerText = 'ليس لديك حساب؟ إنشاء حساب جديد';
     }
   }
 
   window.submitAuth = function() {
     const email = document.getElementById('userEmail').value.trim();
     const pass = document.getElementById('userPassword').value;
-    if(!email || !pass) return showToast("丕賰鬲亘 丕賱廿賷賲賷賱 賵丕賱亘丕爻賵乇丿!", true);
-    if(pass.length < 6) return showToast("賰賱賲丞 丕賱賲乇賵乇 賱丕夭賲 鬲賰賵賳 6 丨乇賵賮 兀賵 兀賰鬲乇!", true);
-    const btn = document.getElementById('authSubmitBtn'); btn.innerText = "噩丕乇賷 丕賱賲毓丕賱噩丞..."; btn.disabled = true;
+    if(!email || !pass) return showToast("اكتب الإيميل والباسورد!", true);
+    if(pass.length < 6) return showToast("كلمة المرور لازم تكون 6 حروف أو أكتر!", true);
+    const btn = document.getElementById('authSubmitBtn'); btn.innerText = "جاري المعالجة..."; btn.disabled = true;
 
     if (isRegistering) {
       auth.createUserWithEmailAndPassword(email, pass)
-        .then(() => { closeModal('userModal'); showToast("鉁� 鬲賲 廿賳卮丕亍 丕賱丨爻丕亘 亘賳噩丕丨!"); btn.innerText = '廿賳卮丕亍 丨爻丕亘 噩丿賷丿'; btn.disabled = false; })
-        .catch(err => { handleAuthError(err); btn.innerText = '廿賳卮丕亍 丨爻丕亘 噩丿賷丿'; btn.disabled = false; });
+        .then(() => { closeModal('userModal'); showToast("✅ تم إنشاء الحساب بنجاح!"); btn.innerText = 'إنشاء حساب جديد'; btn.disabled = false; })
+        .catch(err => { handleAuthError(err); btn.innerText = 'إنشاء حساب جديد'; btn.disabled = false; });
     } else {
       auth.signInWithEmailAndPassword(email, pass)
-        .then(() => { closeModal('userModal'); showToast("鉁� 鬲賲 鬲爻噩賷賱 丕賱丿禺賵賱 亘賳噩丕丨!"); btn.innerText = '鬲爻噩賷賱 丕賱丿禺賵賱'; btn.disabled = false; })
-        .catch(err => { handleAuthError(err); btn.innerText = '鬲爻噩賷賱 丕賱丿禺賵賱'; btn.disabled = false; });
+        .then(() => { closeModal('userModal'); showToast("✅ تم تسجيل الدخول بنجاح!"); btn.innerText = 'تسجيل الدخول'; btn.disabled = false; })
+        .catch(err => { handleAuthError(err); btn.innerText = 'تسجيل الدخول'; btn.disabled = false; });
     }
   };
 
   function handleAuthError(err) {
-    let msg = "丨丿孬 禺胤兀 賲丕貙 丨丕賵賱 賲乇丞 兀禺乇賶.";
-    if (err.code === 'auth/email-already-in-use') msg = "賴匕丕 丕賱廿賷賲賷賱 賲爻噩賱 亘丕賱賮毓賱. 噩乇亘 鬲爻噩賷賱 丕賱丿禺賵賱.";
-    else if (err.code === 'auth/invalid-email') msg = "丕賱廿賷賲賷賱 睾賷乇 氐丨賷丨 (鬲兀賰丿 賲賳 賰鬲丕亘鬲賴 氐丨).";
-    else if (err.code === 'auth/weak-password') msg = "賰賱賲丞 丕賱賲乇賵乇 囟毓賷賮丞貙 丕爻鬲禺丿賲 6 丨乇賵賮 兀賵 兀乇賯丕賲 毓賱賶 丕賱兀賯賱.";
-    else if (err.code === 'auth/user-not-found') msg = "賱丕 賷賵噩丿 丨爻丕亘 亘賴匕丕 丕賱廿賷賲賷賱. 噩乇亘 廿賳卮丕亍 丨爻丕亘 噩丿賷丿.";
-    else if (err.code === 'auth/wrong-password') msg = "賰賱賲丞 丕賱賲乇賵乇 睾賱胤. 噩乇亘 鬲丕賳賷.";
-    showToast("鉂� " + msg, true);
+    let msg = "حدث خطأ ما، حاول مرة أخرى.";
+    if (err.code === 'auth/email-already-in-use') msg = "هذا الإيميل مسجل بالفعل. جرب تسجيل الدخول.";
+    else if (err.code === 'auth/invalid-email') msg = "الإيميل غير صحيح (تأكد من كتابته صح).";
+    else if (err.code === 'auth/weak-password') msg = "كلمة المرور ضعيفة، استخدم 6 حروف أو أرقام على الأقل.";
+    else if (err.code === 'auth/user-not-found') msg = "لا يوجد حساب بهذا الإيميل. جرب إنشاء حساب جديد.";
+    else if (err.code === 'auth/wrong-password') msg = "كلمة المرور غلط. جرب تاني.";
+    showToast("❌ " + msg, true);
   }
 
-  window.readerLogout = function() { auth.signOut().then(() => { closeModal('userModal'); showToast("馃憢 鬲賲 鬲爻噩賷賱 丕賱禺乇賵噩."); }); };
+  window.readerLogout = function() { auth.signOut().then(() => { closeModal('userModal'); showToast("👋 تم تسجيل الخروج."); }); };
 
   window.toggleFavorite = function(storyId, event) {
     if(event) event.stopPropagation(); 
     if(!currentUser) {
-      showToast("賱丕夭賲 鬲爻噩賱 丿禺賵賱 丕賱兀賵賱 毓卮丕賳 鬲丨賮馗 丕賱賮賷丿賷賵賴丕鬲 賮賷 丕賱賲賮囟賱丞!", true);
+      showToast("لازم تسجل دخول الأول عشان تحفظ الفيديوهات في المفضلة!", true);
       return openUserModal();
     }
     
     if (userFavorites.includes(storyId)) {
       userFavorites = userFavorites.filter(id => id !== storyId);
-      showToast("馃挃 鬲賲 廿夭丕賱丞 丕賱賮賷丿賷賵 賲賳 丕賱賲賮囟賱丞");
+      showToast("💔 تم إزالة الفيديو من المفضلة");
     } else {
       userFavorites.push(storyId);
-      showToast("鉂わ笍 鬲賲 廿囟丕賮丞 丕賱賮賷丿賷賵 賱賱賲賮囟賱丞");
+      showToast("❤️ تم إضافة الفيديو للمفضلة");
     }
     
     db.collection("users").doc(currentUser.uid).set({ favorites: userFavorites }, { merge: true })
       .then(() => { renderStories(currentCat); updateReadModalFavBtn(); })
-      .catch(e => showToast("丨丿孬 禺胤兀貙 丨丕賵賱 鬲丕賳賷.", true));
+      .catch(e => showToast("حدث خطأ، حاول تاني.", true));
   };
 
   window.toggleFavoriteReadModal = function() { if(currentStoryData) toggleFavorite(currentStoryData.id); };
@@ -534,9 +533,9 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
   function updateReadModalFavBtn() {
     const btn = document.getElementById('readFavBtn');
     if(currentUser && currentStoryData && userFavorites.includes(currentStoryData.id)) {
-      btn.innerText = '鉂わ笍'; btn.classList.add('active');
+      btn.innerText = '❤️'; btn.classList.add('active');
     } else {
-      btn.innerText = '馃'; btn.classList.remove('active');
+      btn.innerText = '🤍'; btn.classList.remove('active');
     }
   }
 
@@ -550,8 +549,8 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
       closeModal('adminModal'); isAdmin = true;
       try { sessionStorage.setItem('isAdmin', 'true'); } catch(e) {} 
       setAdminUI(); renderStories(currentCat);
-      showToast('鉁� 兀賴賱丕賸 亘賰 賷丕 boss man!');
-    } else { showToast('鉂� 賰賱賲丞 丕賱賲乇賵乇 睾賱胤!', true); }
+      showToast('✅ أهلاً بك يا boss man!');
+    } else { showToast('❌ كلمة المرور غلط!', true); }
   };
 
   window.adminLogout = function() {
@@ -576,13 +575,22 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
   };
 
   window.openStoryModal = function() { 
-    if (allCategories.length === 0) return showToast("兀囟賮 鬲氐賳賷賮 兀賵賱丕賸!", true);
+    if (allCategories.length === 0) return showToast("أضف تصنيف أولاً!", true);
     document.getElementById('storyModal').classList.add('active'); togglePremiumFields(); 
     document.getElementById('inpVideoUrl').value = '';
   };
   
   window.openCatModal = function() { document.getElementById('catModal').classList.add('active'); renderCategoriesListAdmin(); };
-  window.closeModal = function(modalId) { document.getElementById(modalId).classList.remove('active'); };
+  
+  // الدالة المعدلة عشان توقف الفيديو لما تقفل
+  window.closeModal = function(modalId) { 
+    document.getElementById(modalId).classList.remove('active'); 
+    
+    if (modalId === 'readModal') {
+      document.getElementById('videoContainer').innerHTML = '';
+      document.getElementById('videoFallback').style.display = 'none';
+    }
+  };
 
   window.togglePremiumFields = function() {
     const isChecked = document.getElementById('inpPremium').checked;
@@ -601,44 +609,44 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     var textArea = document.createElement("textarea");
     textArea.value = text; textArea.style.position = "fixed"; textArea.style.opacity = "0";
     document.body.appendChild(textArea); textArea.focus(); textArea.select();
-    try { if(document.execCommand('copy')) showCopySuccess(btn); else showToast("丕賱賲鬲氐賮丨 賲賳毓 丕賱賳爻禺. 丕囟睾胤 賲胤賵賱丕賸 賱賳爻禺 丕賱毓賳賵丕賳.", true); } 
-    catch (err) { showToast("丕囟睾胤 賲胤賵賱丕賸 賱賳爻禺 丕賱毓賳賵丕賳.", true); }
+    try { if(document.execCommand('copy')) showCopySuccess(btn); else showToast("المتصفح منع النسخ. اضغط مطولاً لنسخ العنوان.", true); } 
+    catch (err) { showToast("اضغط مطولاً لنسخ العنوان.", true); }
     document.body.removeChild(textArea);
   }
 
   function showCopySuccess(btn) {
-    btn.innerText = '鉁� 鬲賲 丕賱賳爻禺'; btn.style.background = '#2ecc71'; btn.style.color = '#fff';
-    setTimeout(() => { btn.innerText = '馃搵 賳爻禺 丕賱毓賳賵丕賳'; btn.style.background = 'var(--border)'; btn.style.color = 'var(--text-main)'; }, 2000);
+    btn.innerText = '✅ تم النسخ'; btn.style.background = '#2ecc71'; btn.style.color = '#fff';
+    setTimeout(() => { btn.innerText = '📋 نسخ العنوان'; btn.style.background = 'var(--border)'; btn.style.color = 'var(--text-main)'; }, 2000);
   }
 
   window.openCryptoModal = function() {
     document.getElementById('cryptoAmount').innerText = currentStoryData.price || 5;
     document.getElementById('cryptoAddress').innerText = MY_USDT_ADDRESS;
     document.getElementById('txHashInput').value = '';
-    document.getElementById('verifyBtn').innerText = '鬲丨賯賯 賵丕賮鬲丨 丕賱賮賷丿賷賵'; document.getElementById('verifyBtn').disabled = false;
+    document.getElementById('verifyBtn').innerText = 'تحقق وافتح الفيديو'; document.getElementById('verifyBtn').disabled = false;
     document.getElementById('cryptoModal').classList.add('active');
   };
 
   window.verifyCryptoPayment = async function() {
     const txHash = document.getElementById('txHashInput').value.trim();
     const btn = document.getElementById('verifyBtn');
-    if (txHash.length !== 64) return showToast("乇賯賲 丕賱毓賲賱賷丞 (TxID) 賱丕夭賲 賷賰賵賳 64 丨乇賮.", true);
-    btn.innerText = "噩丕乇賷 丕賱鬲丨賯賯..."; btn.disabled = true;
+    if (txHash.length !== 64) return showToast("رقم العملية (TxID) لازم يكون 64 حرف.", true);
+    btn.innerText = "جاري التحقق..."; btn.disabled = true;
     try {
         const response = await fetch(`https://apilist.tronscanapi.com/api/transaction-info?hash=${txHash}`);
-        if (!response.ok) throw new Error("賮卮賱 丕賱丕鬲氐丕賱 亘卮亘賰丞 丕賱鬲賷乇丕賳.");
+        if (!response.ok) throw new Error("فشل الاتصال بشبكة التيران.");
         const data = await response.json();
-        if (!data || !data.trc20TransferInfo || data.trc20TransferInfo.length === 0) throw new Error("賱賲 賷鬲賲 丕賱毓孬賵乇 毓賱賶 亘賷丕賳丕鬲 鬲丨賵賷賱.");
+        if (!data || !data.trc20TransferInfo || data.trc20TransferInfo.length === 0) throw new Error("لم يتم العثور على بيانات تحويل.");
         const transfer = data.trc20TransferInfo[0];
         const toAddress = transfer.to_address;
         const amount = parseInt(transfer.amount_str) / 1000000;
         const requiredAmount = currentStoryData.price || 5;
-        if (toAddress !== MY_USDT_ADDRESS) throw new Error("丕賱鬲丨賵賷賱 賱賲 賷鬲賲 廿乇爻丕賱賴 賱賲丨賮馗丞 丕賱鬲胤亘賷賯.");
-        if (amount < requiredAmount) throw new Error(`丕賱賲亘賱睾 丕賱賲丨賵賱 (${amount}$) 兀賯賱 賲賳 丕賱賲胤賱賵亘 (${requiredAmount}$).`);
+        if (toAddress !== MY_USDT_ADDRESS) throw new Error("التحويل لم يتم إرساله لمحفظة التطبيق.");
+        if (amount < requiredAmount) throw new Error(`المبلغ المحول (${amount}$) أقل من المطلوب (${requiredAmount}$).`);
         unlockStoryForUser();
     } catch (error) {
-        console.error(error); showToast("鉂� " + error.message, true);
-        btn.innerText = '鬲丨賯賯 賵丕賮鬲丨 丕賱賮賷丿賷賵'; btn.disabled = false;
+        console.error(error); showToast("❌ " + error.message, true);
+        btn.innerText = 'تحقق وافتح الفيديو'; btn.disabled = false;
     }
   };
 
@@ -648,17 +656,17 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
       db.collection("users").doc(currentUser.uid).set({
         unlocked: userUnlockedStories
       }, { merge: true }).then(() => {
-        showToast(`鉁� 鬲賲 丕賱鬲丨賯賯! 丕賱賮賷丿賷賵 丕鬲賮鬲丨 賮賷 丨爻丕亘賰.`);
+        showToast(`✅ تم التحقق! الفيديو اتفتح في حسابك.`);
         document.getElementById('paywallSection').style.display = 'none';
         loadVideoPlayer(currentStoryData.videoUrl);
         closeModal('cryptoModal'); renderStories(currentCat);
-      }).catch(e => showToast("丨丿孬 禺胤兀 賮賷 丕賱丨賮馗貙 鬲兀賰丿 賲賳 丕賱廿賳鬲乇賳鬲.", true));
+      }).catch(e => showToast("حدث خطأ في الحفظ، تأكد من الإنترنت.", true));
     } else {
       if (!guestUnlockedStories.includes(currentStoryData.id)) {
         guestUnlockedStories.push(currentStoryData.id);
         try { localStorage.setItem('guestUnlockedStories', JSON.stringify(guestUnlockedStories)); } catch(e) {}
       }
-      showToast(`鉁� 鬲賲 丕賱鬲丨賯賯! (爻噩賱 丿禺賵賱賰 毓卮丕賳 鬲賮鬲丨賴 毓賱賶 兀賷 噩賴丕夭).`);
+      showToast(`✅ تم التحقق! (سجل دخولك عشان تفتحه على أي جهاز).`);
       document.getElementById('paywallSection').style.display = 'none';
       loadVideoPlayer(currentStoryData.videoUrl);
       closeModal('cryptoModal'); renderStories(currentCat);
@@ -674,7 +682,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     fallbackBox.style.display = 'none';
 
     if (!url) {
-      container.innerHTML = '<div style="color:white; text-align:center; padding:50px;">賱丕 賷賵噩丿 乇丕亘胤 賮賷丿賷賵 氐丕賱丨</div>';
+      container.innerHTML = '<div style="color:white; text-align:center; padding:50px;">لا يوجد رابط فيديو صالح</div>';
       return;
     }
 
@@ -695,7 +703,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
         fallbackBox.style.display = 'block';
         fallbackLink.href = `https://www.youtube.com/watch?v=${videoId}`;
       } else {
-        container.innerHTML = '<div style="color:white; text-align:center; padding:50px;">丕賱乇丕亘胤 賲賱賵卮 毓賱丕賯丞 亘賮賷丿賷賵 賷賵鬲賷賵亘 氐丕賱丨.</div>';
+        container.innerHTML = '<div style="color:white; text-align:center; padding:50px;">الرابط ملوش علاقة بفيديو يوتيوب صالح.</div>';
       }
     } else {
       container.innerHTML = `<video src="${url}" controls autoplay playsinline></video>`;
@@ -725,8 +733,8 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
         loadVideoPlayer(story.videoUrl);
       } else {
         const price = story.price || 5;
-        document.getElementById('paywallText').innerText = `毓噩亘鬲賰 丕賱亘丿丕賷丞責 丕丿賮毓 毓卮丕賳 鬲賰賲賱 賮賷丿賷賵 "${story.title}".`;
-        document.getElementById('payBtnText').innerText = `丕丿賮毓 ${price}$ 賵丕賰賲賱 丕賱賮賷丿賷賵`;
+        document.getElementById('paywallText').innerText = `عجبتك البداية؟ ادفع عشان تكمل فيديو "${story.title}".`;
+        document.getElementById('payBtnText').innerText = `ادفع ${price}$ واكمل الفيديو`;
         paywallSection.style.display = 'block';
         document.getElementById('videoContainer').innerHTML = ''; 
         document.getElementById('videoFallback').style.display = 'none';
@@ -749,10 +757,10 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
 
   function renderFilters() {
     const container = document.getElementById('filtersContainer');
-    let html = `<button class="filter-btn" data-cat="丕賱賰賱" style="background:var(--panel); border:1px solid ${currentCat === '丕賱賰賱' ? 'var(--gold)' : 'var(--border)'}; color:${currentCat === '丕賱賰賱' ? 'var(--gold)' : 'var(--text-main)'}; padding:8px 16px; border-radius:20px; cursor:pointer;">丕賱賰賱</button>`;
+    let html = `<button class="filter-btn" data-cat="الكل" style="background:var(--panel); border:1px solid ${currentCat === 'الكل' ? 'var(--gold)' : 'var(--border)'}; color:${currentCat === 'الكل' ? 'var(--gold)' : 'var(--text-main)'}; padding:8px 16px; border-radius:20px; cursor:pointer;">الكل</button>`;
     
     if (currentUser) {
-      html += `<button class="filter-btn" data-cat="丕賱賲賮囟賱丞" style="background:var(--panel); border:1px solid ${currentCat === '丕賱賲賮囟賱丞' ? '#e74c3c' : 'var(--border)'}; color:${currentCat === '丕賱賲賮囟賱丞' ? '#e74c3c' : 'var(--text-main)'}; padding:8px 16px; border-radius:20px; cursor:pointer;">丕賱賲賮囟賱丞 鉂わ笍</button>`;
+      html += `<button class="filter-btn" data-cat="المفضلة" style="background:var(--panel); border:1px solid ${currentCat === 'المفضلة' ? '#e74c3c' : 'var(--border)'}; color:${currentCat === 'المفضلة' ? '#e74c3c' : 'var(--text-main)'}; padding:8px 16px; border-radius:20px; cursor:pointer;">المفضلة ❤️</button>`;
     }
 
     allCategories.forEach(c => {
@@ -773,33 +781,33 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
 
   function updateCategoryDropdown() {
     const select = document.getElementById('inpCat');
-    select.innerHTML = allCategories.length === 0 ? '<option value="">賱丕 鬲賵噩丿 鬲氐賳賷賮丕鬲</option>' : '';
+    select.innerHTML = allCategories.length === 0 ? '<option value="">لا توجد تصنيفات</option>' : '';
     allCategories.forEach(c => select.innerHTML += `<option value="${c.name}">${c.name}</option>`);
   }
 
   function renderCategoriesListAdmin() {
     const list = document.getElementById('catListContainer');
-    list.innerHTML = allCategories.length === 0 ? '<div style="color:var(--text-muted); text-align:center; padding:10px;">賱丕 鬲賵噩丿 鬲氐賳賷賮丕鬲</div>' : '';
-    allCategories.forEach(c => { list.innerHTML += `<div class="cat-item"><span>${c.name}</span><button onclick="deleteCategory('${c.id}', '${c.name}')">馃棏锔� 賲爻丨</button></div>`; });
+    list.innerHTML = allCategories.length === 0 ? '<div style="color:var(--text-muted); text-align:center; padding:10px;">لا توجد تصنيفات</div>' : '';
+    allCategories.forEach(c => { list.innerHTML += `<div class="cat-item"><span>${c.name}</span><button onclick="deleteCategory('${c.id}', '${c.name}')">🗑️ مسح</button></div>`; });
   }
 
   window.addCategory = async function() {
     const input = document.getElementById('newCatName');
     const name = input.value.trim();
-    if (!name) return showToast('丕賰鬲亘 丕爻賲 丕賱鬲氐賳賷賮!', true);
-    if (allCategories.some(c => c.name === name)) return showToast('丕賱鬲氐賳賷賮 賲賵噩賵丿 亘丕賱賮毓賱!', true);
-    try { await categoriesRef.add({ name }); input.value = ''; await fetchCategories(); renderCategoriesListAdmin(); showToast('鉁� 鬲賲 廿囟丕賮丞 丕賱鬲氐賳賷賮'); } catch (e) { showToast('禺胤兀', true); }
+    if (!name) return showToast('اكتب اسم التصنيف!', true);
+    if (allCategories.some(c => c.name === name)) return showToast('التصنيف موجود بالفعل!', true);
+    try { await categoriesRef.add({ name }); input.value = ''; await fetchCategories(); renderCategoriesListAdmin(); showToast('✅ تم إضافة التصنيف'); } catch (e) { showToast('خطأ', true); }
   };
 
   window.deleteCategory = async function(id, name) {
-    if (!confirm(`賲鬲兀賰丿 賲賳 賲爻丨 "${name}"責`)) return;
-    try { await categoriesRef.doc(id).delete(); if (currentCat === name) currentCat = '丕賱賰賱'; await fetchCategories(); renderCategoriesListAdmin(); renderStories(currentCat); } catch (e) { showToast('禺胤兀', true); }
+    if (!confirm(`متأكد من مسح "${name}"؟`)) return;
+    try { await categoriesRef.doc(id).delete(); if (currentCat === name) currentCat = 'الكل'; await fetchCategories(); renderCategoriesListAdmin(); renderStories(currentCat); } catch (e) { showToast('خطأ', true); }
   };
 
   window.deleteStory = async function(storyId, event) {
     event.stopPropagation(); 
-    if (!confirm('賲鬲兀賰丿 賲賳 賲爻丨 丕賱賮賷丿賷賵 丿賷責')) return;
-    try { await storiesRef.doc(storyId).delete(); fetchStories(); } catch (e) { showToast('禺胤兀.', true); }
+    if (!confirm('متأكد من مسح الفيديو دي؟')) return;
+    try { await storiesRef.doc(storyId).delete(); fetchStories(); } catch (e) { showToast('خطأ.', true); }
   };
 
   async function fetchStories() {
@@ -809,38 +817,38 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
       allStories = [];
       snapshot.forEach((doc) => allStories.push({ id: doc.id, ...doc.data() }));
       renderStories(currentCat);
-    } catch (e) { grid.innerHTML = '<div class="empty">禺胤兀 賮賷 丕賱丕鬲氐丕賱.</div>'; }
+    } catch (e) { grid.innerHTML = '<div class="empty">خطأ في الاتصال.</div>'; }
   }
 
-  function renderStories(category = '丕賱賰賱') {
+  function renderStories(category = 'الكل') {
     const grid = document.getElementById('storyGrid');
     const heroSection = document.getElementById('heroSection');
     
     let filtered = allStories;
-    if (category === '丕賱賲賮囟賱丞') {
+    if (category === 'المفضلة') {
       filtered = allStories.filter(s => userFavorites.includes(s.id));
-    } else if (category !== '丕賱賰賱') {
+    } else if (category !== 'الكل') {
       filtered = allStories.filter(s => s.cat === category);
     }
 
     if (filtered.length === 0) {
       heroSection.classList.add('hidden'); 
-      grid.innerHTML = `<div class="empty">賱丕 鬲賵噩丿 賮賷丿賷賵賴丕鬲 ${category === '丕賱賲賮囟賱丞' ? '賮賷 丕賱賲賮囟賱丞' : '賮賷 賴匕丕 丕賱賯爻賲'}.</div>`; 
+      grid.innerHTML = `<div class="empty">لا توجد فيديوهات ${category === 'المفضلة' ? 'في المفضلة' : 'في هذا القسم'}.</div>`; 
       return;
     }
 
     const heroStory = filtered[0];
     const restStories = filtered.slice(1);
     heroSection.classList.remove('hidden');
-    const deleteHeroBtn = isAdmin ? `<button class="btn-delete" onclick="deleteStory('${heroStory.id}', event)">馃棏锔�</button>` : '';
+    const deleteHeroBtn = isAdmin ? `<button class="btn-delete" onclick="deleteStory('${heroStory.id}', event)">🗑️</button>` : '';
     const isFavHero = userFavorites.includes(heroStory.id);
-    const favHeroBtn = currentUser ? `<button class="btn-fav-card ${isFavHero ? 'active' : ''}" onclick="toggleFavorite('${heroStory.id}', event)">${isFavHero ? '鉂わ笍' : '馃'}</button>` : '';
+    const favHeroBtn = currentUser ? `<button class="btn-fav-card ${isFavHero ? 'active' : ''}" onclick="toggleFavorite('${heroStory.id}', event)">${isFavHero ? '❤️' : '🤍'}</button>` : '';
     
     let heroUnlocked = currentUser ? userUnlockedStories.includes(heroStory.id) : guestUnlockedStories.includes(heroStory.id);
     let heroBadge = '';
     if (heroStory.isPremium) {
-      if (heroUnlocked) { heroBadge = `<span class="badge-unlocked">鉁� 鬲賲 丕賱卮乇丕亍</span>`; } 
-      else { heroBadge = `<span class="badge-premium">馃憫 ${heroStory.price || 5}$</span>`; }
+      if (heroUnlocked) { heroBadge = `<span class="badge-unlocked">✅ تم الشراء</span>`; } 
+      else { heroBadge = `<span class="badge-premium">👑 ${heroStory.price || 5}$</span>`; }
     }
     
     heroSection.innerHTML = `
@@ -850,12 +858,12 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="hero-text">
-          <span class="hero-tag">鉁� 賮賷丿賷賵 丕賱賱賷賱丞</span>
+          <span class="hero-tag">✨ فيديو الليلة</span>
           <h2 class="hero-title">${heroStory.title}</h2>
           <p class="hero-desc">${heroStory.desc}</p>
-          <div class="hero-meta"><span>馃搨 ${heroStory.cat}</span><span>鈴� ${heroStory.dur} 丿賯丕卅賯</span> ${heroBadge}</div>
+          <div class="hero-meta"><span>📂 ${heroStory.cat}</span><span>⏱ ${heroStory.dur} دقائق</span> ${heroBadge}</div>
         </div>
-        <button class="hero-btn" onclick="openReadModal('${heroStory.id}')">卮丕賴丿 丕賱丌賳 <span>鈻�</span></button>
+        <button class="hero-btn" onclick="openReadModal('${heroStory.id}')">شاهد الآن <span>▶</span></button>
       </div>
     `;
 
@@ -870,15 +878,15 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
       const card = document.createElement('div');
       card.className = 'card'; card.setAttribute('onclick', `openReadModal('${s.id}')`);
       
-      const deleteBtnHTML = isAdmin ? `<button class="btn-delete" onclick="deleteStory('${s.id}', event)">馃棏锔�</button>` : '';
+      const deleteBtnHTML = isAdmin ? `<button class="btn-delete" onclick="deleteStory('${s.id}', event)">🗑️</button>` : '';
       const isFav = userFavorites.includes(s.id);
-      const favBtnHTML = currentUser ? `<button class="btn-fav-card ${isFav ? 'active' : ''}" onclick="toggleFavorite('${s.id}', event)">${isFav ? '鉂わ笍' : '馃'}</button>` : '';
+      const favBtnHTML = currentUser ? `<button class="btn-fav-card ${isFav ? 'active' : ''}" onclick="toggleFavorite('${s.id}', event)">${isFav ? '❤️' : '🤍'}</button>` : '';
       
       let isUnlocked = currentUser ? userUnlockedStories.includes(s.id) : guestUnlockedStories.includes(s.id);
       let premiumTag = '';
       if (s.isPremium) {
-        if (isUnlocked) { premiumTag = `<span class="badge-unlocked">鉁� 鬲賲 丕賱卮乇丕亍</span>`; } 
-        else { premiumTag = `<span class="badge-premium">馃憫 ${s.price || 5}$</span>`; }
+        if (isUnlocked) { premiumTag = `<span class="badge-unlocked">✅ تم الشراء</span>`; } 
+        else { premiumTag = `<span class="badge-premium">👑 ${s.price || 5}$</span>`; }
       }
       
       card.innerHTML = `
@@ -886,13 +894,13 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
         ${favBtnHTML}
         <div class="card-img-wrapper">
           <img src="${s.img}" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop'">
-          <div class="card-play-icon">鈻�</div>
+          <div class="card-play-icon">▶</div>
           <span class="card-cat-tag">${s.cat}</span>
         </div>
         <div class="card-content">
           <div class="card-title">${s.title}</div>
           <div class="card-desc">${s.desc}</div>
-          <div class="card-meta">${premiumTag}<span>鈴� ${s.dur} 丿賯丕卅賯</span></div>
+          <div class="card-meta">${premiumTag}<span>⏱ ${s.dur} دقائق</span></div>
         </div>
       `;
       grid.appendChild(card);
@@ -910,9 +918,9 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     const isPremium = document.getElementById('inpPremium').checked;
     const price = parseFloat(document.getElementById('inpPrice').value) || 5;
     
-    if (!cat || !title || !videoUrl) return showToast('丕賰鬲亘 丕賱毓賳賵丕賳 賵丨胤 乇丕亘胤 丕賱賮賷丿賷賵 賵丕禺鬲丕乇 鬲氐賳賷賮!', true);
+    if (!cat || !title || !videoUrl) return showToast('اكتب العنوان وحط رابط الفيديو واختار تصنيف!', true);
     
-    btn.innerText = "噩丕乇賷 丕賱賳卮乇..."; btn.disabled = true;
+    btn.innerText = "جاري النشر..."; btn.disabled = true;
     try {
       await storiesRef.add({ 
         title, img, desc, videoUrl, cat, dur: parseInt(dur), isPremium: isPremium,
@@ -920,9 +928,9 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
       });
       document.getElementById('inpTitle').value = ''; document.getElementById('inpImg').value = ''; document.getElementById('inpDesc').value = ''; document.getElementById('inpVideoUrl').value = '';
       document.getElementById('inpPremium').checked = false;
-      togglePremiumFields(); closeModal('storyModal'); fetchStories(); showToast('鉁� 鬲賲 丕賱賳卮乇 亘賳噩丕丨!');
-    } catch (e) { showToast('禺胤兀 賮賷 丕賱賳卮乇.', true); } 
-    finally { btn.innerText = "賳卮乇 賱賱噩賲賷毓 馃殌"; btn.disabled = false; }
+      togglePremiumFields(); closeModal('storyModal'); fetchStories(); showToast('✅ تم النشر بنجاح!');
+    } catch (e) { showToast('خطأ في النشر.', true); } 
+    finally { btn.innerText = "نشر للجميع 🚀"; btn.disabled = false; }
   };
 
   setTimeout(() => {
