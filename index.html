@@ -582,13 +582,37 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
   
   window.openCatModal = function() { document.getElementById('catModal').classList.add('active'); renderCategoriesListAdmin(); };
   
-  // الدالة المعدلة عشان توقف الفيديو لما تقفل
+  // دالة إيقاف وتنظيف الفيديو
+  function stopAndClearVideo() {
+    const container = document.getElementById('videoContainer');
+    if (!container) return;
+
+    // أوقف كل iframe (يوتيوب وغيره) بتفريغ الـ src
+    container.querySelectorAll('iframe').forEach(f => {
+      try { f.src = 'about:blank'; } catch(e) {}
+    });
+
+    // أوقف كل <video> مباشر
+    container.querySelectorAll('video').forEach(v => {
+      try {
+        v.pause();
+        v.removeAttribute('src');
+        v.load();
+      } catch(e) {}
+    });
+
+    container.innerHTML = '';
+    const fb = document.getElementById('videoFallback');
+    if (fb) fb.style.display = 'none';
+  }
+
   window.closeModal = function(modalId) { 
     document.getElementById(modalId).classList.remove('active'); 
     
     if (modalId === 'readModal') {
-      document.getElementById('videoContainer').innerHTML = '';
-      document.getElementById('videoFallback').style.display = 'none';
+      stopAndClearVideo();
+      // صفّر بيانات الفيديو الحالي كمان عشان ما يضل عالق
+      currentStoryData = null;
     }
   };
 
@@ -678,6 +702,10 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
     const fallbackBox = document.getElementById('videoFallback');
     const fallbackLink = document.getElementById('videoFallbackLink');
     
+    // نظّف أي فيديو شغال قبل ما تحمل الجديد
+    container.querySelectorAll('iframe').forEach(f => { try { f.src = 'about:blank'; } catch(e) {} });
+    container.querySelectorAll('video').forEach(v => { try { v.pause(); v.removeAttribute('src'); } catch(e) {} });
+
     container.innerHTML = '';
     fallbackBox.style.display = 'none';
 
@@ -736,8 +764,7 @@ body.light-mode .read-nav { background: rgba(247, 245, 240, 0.9); }
         document.getElementById('paywallText').innerText = `عجبتك البداية؟ ادفع عشان تكمل فيديو "${story.title}".`;
         document.getElementById('payBtnText').innerText = `ادفع ${price}$ واكمل الفيديو`;
         paywallSection.style.display = 'block';
-        document.getElementById('videoContainer').innerHTML = ''; 
-        document.getElementById('videoFallback').style.display = 'none';
+        stopAndClearVideo();
       }
       
       updateReadModalFavBtn(); 
